@@ -16,6 +16,8 @@
 		3F433C2C2A0571970011CC41 /* vulcan.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F433C292A0571960011CC41 /* vulcan.png */; };
 		3F433C2D2A0571970011CC41 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F433C2A2A0571970011CC41 /* star.png */; };
 		3F433C2E2A0571970011CC41 /* startrek.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F433C2B2A0571970011CC41 /* startrek.png */; };
+		3FC52CAC2A09826D001186F2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52CAB2A09826D001186F2 /* Question.swift */; };
+		3FC52CB12A098DEE001186F2 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC52CB02A098DEE001186F2 /* QuizBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3F433C292A0571960011CC41 /* vulcan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vulcan.png; path = appPics/vulcan.png; sourceTree = SOURCE_ROOT; };
 		3F433C2A2A0571970011CC41 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = appPics/star.png; sourceTree = SOURCE_ROOT; };
 		3F433C2B2A0571970011CC41 /* startrek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startrek.png; path = appPics/startrek.png; sourceTree = SOURCE_ROOT; };
+		3FC52CAB2A09826D001186F2 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3FC52CB02A098DEE001186F2 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +68,9 @@
 			children = (
 				3F433C152A056EA20011CC41 /* AppDelegate.swift */,
 				3F433C172A056EA20011CC41 /* SceneDelegate.swift */,
-				3F433C192A056EA20011CC41 /* ViewController.swift */,
-				3F433C1B2A056EA20011CC41 /* Main.storyboard */,
+				3FC52CAD2A098D20001186F2 /* Model */,
+				3FC52CAF2A098D85001186F2 /* View */,
+				3FC52CAE2A098D44001186F2 /* Controller */,
 				3F433C1E2A056EA30011CC41 /* Assets.xcassets */,
 				3F433C2A2A0571970011CC41 /* star.png */,
 				3F433C2B2A0571970011CC41 /* startrek.png */,
@@ -74,6 +79,31 @@
 				3F433C232A056EA30011CC41 /* Info.plist */,
 			);
 			path = trekTrivia;
+			sourceTree = "<group>";
+		};
+		3FC52CAD2A098D20001186F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FC52CAB2A09826D001186F2 /* Question.swift */,
+				3FC52CB02A098DEE001186F2 /* QuizBrain.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3FC52CAE2A098D44001186F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F433C192A056EA20011CC41 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3FC52CAF2A098D85001186F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F433C1B2A056EA20011CC41 /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC52CB12A098DEE001186F2 /* QuizBrain.swift in Sources */,
 				3F433C1A2A056EA20011CC41 /* ViewController.swift in Sources */,
+				3FC52CAC2A09826D001186F2 /* Question.swift in Sources */,
 				3F433C162A056EA20011CC41 /* AppDelegate.swift in Sources */,
 				3F433C182A056EA20011CC41 /* SceneDelegate.swift in Sources */,
 			);

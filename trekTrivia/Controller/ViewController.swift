@@ -31,17 +31,44 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
+    //an instance
+    var quizBrain = QuizBrain()
+
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //questionLabel.text = "Ask something"
         // Do any additional setup after loading the view.
     }
     
     
     @IBAction func answerPressed(_ sender: UIButton) {
         
-        print("pressed")
+        //check the question/answer
+        let userAnswer = sender.currentTitle!
+        quizBrain.checkAnswer(userAnswer)
+        //if the answerpressed === questionAnswer:
+        //stopped here. Function outputs. 
+        
+        //Progressing Questions:
+        
+        if questionNumber + 1 < quiz.count {
+            questionNumber += 1
+            
+        }else{
+            questionNumber = 0
+        }
+        
+        //print("pressed")
+        
+    }
+    
+    func updateUI(){
+        //progressBar.progress = Float(questionNum + 1)/Float(quiz.count)
         
     }
     
@@ -50,4 +77,7 @@ class ViewController: UIViewController {
     
     
 }
+
+//need to work on UI -need constraints on everything
+//timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
 

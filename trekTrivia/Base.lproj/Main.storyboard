@@ -44,12 +44,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="startrek" translatesAutoresizingMaskIntoConstraints="NO" id="GaT-7z-RdD">
+                                <rect key="frame" x="205" y="87" width="120" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star.png" translatesAutoresizingMaskIntoConstraints="NO" id="4mt-bZ-FUB">
+                                <rect key="frame" x="135" y="141" width="62" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vulcan" translatesAutoresizingMaskIntoConstraints="NO" id="Ss2-Xx-fVi">
+                                <rect key="frame" x="178" y="319" width="63" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JNu-SN-jsi">
+                                <rect key="frame" x="53" y="576" width="283" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.067145320584831233" green="0.16127126832602884" blue="0.31131012271148994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="FpQ-Hv-W6u" id="e51-za-Bpr"/>
+                        <outlet property="progressBar" destination="JNu-SN-jsi" id="8va-sD-vbU"/>
                         <outlet property="questionLabel" destination="brt-yT-JVa" id="GMY-Wj-zVE"/>
                         <outlet property="trueButton" destination="IAO-U3-ntw" id="Kai-5g-gHm"/>
                     </connections>
@@ -59,4 +76,9 @@
             <point key="canvasLocation" x="-103.07692307692308" y="3.5545023696682461"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star.png" width="512" height="512"/>
+        <image name="startrek" width="512" height="512"/>
+        <image name="vulcan" width="512" height="512"/>
+    </resources>
 </document>
