@@ -19,19 +19,47 @@ struct QuizBrain {
         Question(q:"The original series takes places from 1000 to 3000", a:"False")
         ]
     
-    var questionNumber = 0 
+    var questionNumber = 0
+    var score = 0
     
     //external parameter
-    func checkAnswer(_ userAnswer: String){
-        if userAnswer === quiz[questionNumer].answer {
-            sender.backgroundColor = UIColor.green
+    mutating func checkAnswer(_ userAnswer: String) -> Bool{
+        if userAnswer == quiz[questionNumber].answer {
+            score += 1
+            return true
             //user got it right
         }
         else{
-            sender.backgroundColor = UIColor.red
-            //user got it wrong
+            return false
         }
         
     }
+    //updates question number
+    mutating func nextQuestion(){
+        if (questionNumber + 1 < quiz.count) {
+            questionNumber += 1
+            
+        }else{
+            //reset everything
+            questionNumber = 0
+            score = 0
+        }
+        
+    }
+    
+    func getScore() -> Int {
+        return score
+    }
+    
+    //gets question text
+    func getQuestion() -> String {
+        return quiz[questionNumber].text
+    }
+    //gets the progress value
+    func getProgress() -> Float {
+        return Float(questionNumber+1)/Float(quiz.count)
+    }
+    
+    
     
 }

@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var trueButton: UIButton! {
         didSet{
             trueButton.backgroundColor = .clear
@@ -18,7 +17,6 @@ class ViewController: UIViewController {
             trueButton.layer.borderColor = UIColor.white.cgColor
         }
     }
-    
     
     @IBOutlet weak var falseButton: UIButton! {
         didSet{
@@ -29,55 +27,50 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     //an instance
     var quizBrain = QuizBrain()
-
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //questionLabel.text = "Ask something"
-        // Do any additional setup after loading the view.
+        //need this or else nothing will appear; just the default screen settings.
+        updateUI()
     }
-    
     
     @IBAction func answerPressed(_ sender: UIButton) {
         
         //check the question/answer
         let userAnswer = sender.currentTitle!
-        quizBrain.checkAnswer(userAnswer)
-        //if the answerpressed === questionAnswer:
-        //stopped here. Function outputs. 
+        let userGotItRight = quizBrain.checkAnswer(userAnswer)
         
-        //Progressing Questions:
-        
-        if questionNumber + 1 < quiz.count {
-            questionNumber += 1
-            
+        if(userGotItRight){
+            sender.backgroundColor = UIColor.green
+           
         }else{
-            questionNumber = 0
+            sender.backgroundColor = UIColor.red
+           
         }
         
-        //print("pressed")
+        quizBrain.nextQuestion()
         
+       Timer.scheduledTimer(timeInterval: 0.2, target: self, selector:
+        #selector(updateUI), userInfo: nil, repeats: false)
     }
     
-    func updateUI(){
-        //progressBar.progress = Float(questionNum + 1)/Float(quiz.count)
+    @objc func updateUI(){
+        //These will get called 
+        questionLabel.text = quizBrain.getQuestion()
+        scoreLabel.text = "Score: \(quizBrain.getScore())"
+        trueButton.backgroundColor = UIColor.clear
+        falseButton.backgroundColor = UIColor.clear
+        progressBar.progress = quizBrain.getProgress()
         
     }
-    
-    
-    
-    
     
 }
 
-//need to work on UI -need constraints on everything
-//timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
 
