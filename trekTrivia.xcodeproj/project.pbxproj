@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1E1B1D2A434492004E0B5F /* dontInclude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E1B1C2A434492004E0B5F /* dontInclude.swift */; };
 		3F433C162A056EA20011CC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F433C152A056EA20011CC41 /* AppDelegate.swift */; };
 		3F433C182A056EA20011CC41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F433C172A056EA20011CC41 /* SceneDelegate.swift */; };
 		3F433C1A2A056EA20011CC41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F433C192A056EA20011CC41 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F1E1B1C2A434492004E0B5F /* dontInclude.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dontInclude.swift; sourceTree = "<group>"; };
 		3F433C122A056EA20011CC41 /* trekTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trekTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F433C152A056EA20011CC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F433C172A056EA20011CC41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,9 +49,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1E1B1E2A4344A8004E0B5F /* toxicFolder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = toxicFolder;
+			sourceTree = "<group>";
+		};
 		3F433C092A056EA20011CC41 = {
 			isa = PBXGroup;
 			children = (
+				3F1E1B1C2A434492004E0B5F /* dontInclude.swift */,
+				3F1E1B1E2A4344A8004E0B5F /* toxicFolder */,
 				3F433C142A056EA20011CC41 /* trekTrivia */,
 				3F433C132A056EA20011CC41 /* Products */,
 			);
@@ -185,6 +196,7 @@
 				3FC52CAC2A09826D001186F2 /* Question.swift in Sources */,
 				3F433C162A056EA20011CC41 /* AppDelegate.swift in Sources */,
 				3F433C182A056EA20011CC41 /* SceneDelegate.swift in Sources */,
+				3F1E1B1D2A434492004E0B5F /* dontInclude.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
