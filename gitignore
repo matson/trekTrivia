@@ -1,2 +1,5 @@
 toxicFolder
-dontInclude.swift
+dontInclude
+trekTrivia.xcodeproj
+trekTrivia
+.DS_Store
